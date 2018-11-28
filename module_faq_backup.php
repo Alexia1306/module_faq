@@ -31,7 +31,7 @@ class Module_Faq extends Module
         Shop::setContext(Shop::CONTEXT_ALL);
 
       return parent::install() &&
-        $this->registerHook('footer') &&
+        $this->registerHook('displayFooter') &&
         Configuration::updateValue('MODULE_FAQ_NAME', 'my friend');
       }
     }

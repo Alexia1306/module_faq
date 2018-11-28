@@ -44,14 +44,14 @@ class Module_Faq extends Module
 
     public function hookDisplayFooter($params)
     {
-        return "test";
-      //   $this->context->smarty->assign(
-      //     array(
-      //         'module_faq_name' => Configuration::get('MODULE_FAQ_NAME'),
-      //         'module_faq_link' => $this->context->link->getModuleLink('module_faq', 'display')
-      //     )
-      // );
-      // return $this->display(__FILE__, 'module_faq.tpl');
+        // return "test";
+        $this->context->smarty->assign(
+          array(
+              'module_faq_name' => Configuration::get('MODULE_FAQ_NAME'),
+              'module_faq_link' => $this->context->link->getModuleLink('module_faq', 'display')
+          )
+      );
+      return $this->display(__FILE__, 'module_faq.tpl');
     }
 
     public function hookDisplayRightColumn($params)

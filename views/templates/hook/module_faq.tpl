@@ -2,7 +2,7 @@
   <h4>Welcome!</h4>
   <div class="block_content">
     <p>Hello,
-       {if isset($module_faq_name) && $my_module_name}
+       {if isset($module_faq_name) && $module_faq_name}
            {$module_faq_name}
        {else}
            World
